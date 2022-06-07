@@ -2062,7 +2062,7 @@
     (uuid ff4e4763-3b68-4790-b2b7-a99f45617c11)
   )
 
-  (text "Multiple Feedback Lowpass Filter & Amplifier\n1000 V/V with Cutoff Frequency of approx 100kHz\n"
+  (text "Multiple Feedback Lowpass Filter & Amplifier\n25 V/V with Cutoff Frequency of approx 100kHz\n"
     (at 175.26 19.05 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 038e9792-bbbd-4d6a-ad41-0356a4fa93a7)
@@ -2091,7 +2091,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8b9fb94d-4a49-489e-acaa-fd219aeb026e)
   )
-  (text "Cadyn Maddocks & Taylor Smith\nSDR Receiver\nElectronics II\nV4\n"
+  (text "Cadyn Maddocks & Taylor Smith\nSDR Receiver\nElectronics II\nV6\n"
     (at 21.59 27.94 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d78d609e-a3ea-459c-8043-84938f1d8154)
@@ -2304,7 +2304,7 @@
     (property "Reference" "C14" (id 0) (at 189.23 57.1562 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "7.5n" (id 1) (at 189.23 59.6962 0)
+    (property "Value" "6.8n" (id 1) (at 189.23 59.6962 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (id 2) (at 186.69 58.42 0)
@@ -2640,7 +2640,7 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 4cb98030-e11d-46ec-ace2-24b8060477eb)
     (property "Reference" "R7" (id 0) (at 193.04 76.2 90))
-    (property "Value" "51k" (id 1) (at 193.04 78.74 90))
+    (property "Value" "5.1k" (id 1) (at 193.04 78.74 90))
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 193.04 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -2891,7 +2891,7 @@
     (property "Reference" "C16" (id 0) (at 204.47 29.2162 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "14p" (id 1) (at 204.47 31.7562 0)
+    (property "Value" "1n" (id 1) (at 204.47 31.7562 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (id 2) (at 201.93 30.48 0)
@@ -3015,7 +3015,7 @@
     (property "Reference" "C17" (id 0) (at 204.47 74.9362 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "14p" (id 1) (at 204.47 77.4762 0)
+    (property "Value" "1n" (id 1) (at 204.47 77.4762 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (id 2) (at 201.93 76.2 0)
@@ -3175,13 +3175,15 @@
     (pin "1" (uuid 029c926e-9301-4ecd-a01a-e4fcbb72b301))
   )
 
-  (symbol (lib_id "power:+3.3V") (at 78.74 111.76 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 78.74 111.76 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b7fc28a2-6bbb-4ede-9548-ca1a6de5cfd7)
-    (property "Reference" "#PWR05" (id 0) (at 78.74 115.57 0)
+    (property "Reference" "#PWR05" (id 0) (at 74.93 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (id 1) (at 78.74 106.68 0))
+    (property "Value" "+3.3V" (id 1) (at 82.55 111.7599 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
     (property "Footprint" "" (id 2) (at 78.74 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3445,7 +3447,7 @@
     (property "Reference" "C9" (id 0) (at 189.23 49.5362 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "7.5n" (id 1) (at 189.23 52.0762 0)
+    (property "Value" "6.8n" (id 1) (at 189.23 52.0762 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (id 2) (at 186.69 50.8 0)
@@ -3496,7 +3498,7 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid f02277ed-a9de-4a94-9a7a-bd1104f6b9ca)
     (property "Reference" "R8" (id 0) (at 195.58 20.32 90))
-    (property "Value" "51k" (id 1) (at 195.58 22.86 90))
+    (property "Value" "5.1k" (id 1) (at 195.58 22.86 90))
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 195.58 26.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3511,7 +3513,7 @@
     (in_bom yes) (on_board yes)
     (uuid f11b3e3a-7b08-49d8-b4b1-92030ffe70c2)
     (property "Reference" "R10" (id 0) (at 196.85 64.77 90))
-    (property "Value" "160" (id 1) (at 196.85 67.31 90))
+    (property "Value" "51" (id 1) (at 196.85 67.31 90))
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 196.85 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3674,7 +3676,7 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid ffd130c3-85b2-4c7b-9ad6-0a05ac6435fc)
     (property "Reference" "R9" (id 0) (at 195.58 29.21 90))
-    (property "Value" "160" (id 1) (at 195.58 31.75 90))
+    (property "Value" "51" (id 1) (at 195.58 31.75 90))
     (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 195.58 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3784,7 +3786,7 @@
       (reference "C8") (unit 1) (value "22n") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/e74cb884-ae67-437b-a63e-c252033ca7f2"
-      (reference "C9") (unit 1) (value "7.5n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+      (reference "C9") (unit 1) (value "6.8n") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/33f197c7-472d-407b-a7c3-ca5bf645861f"
       (reference "C10") (unit 1) (value "8200uF") (footprint "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm")
@@ -3799,16 +3801,16 @@
       (reference "C13") (unit 1) (value "0.1u") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/113ef254-820a-43ee-81cd-2b01c043d894"
-      (reference "C14") (unit 1) (value "7.5n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+      (reference "C14") (unit 1) (value "6.8n") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/12a4a4ec-1bc7-46d4-a729-c41e56dd799d"
       (reference "C15") (unit 1) (value "22n") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/7ca7273b-db13-441c-8aa4-5d5d29a90e38"
-      (reference "C16") (unit 1) (value "14p") (footprint "Capacitor_SMD:C_0805_2012Metric")
+      (reference "C16") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/92072820-a231-4001-aa0b-fa9aee3d6275"
-      (reference "C17") (unit 1) (value "14p") (footprint "Capacitor_SMD:C_0805_2012Metric")
+      (reference "C17") (unit 1) (value "1n") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/07524787-cdb6-4115-868a-4775882d4f0c"
       (reference "C18") (unit 1) (value "0.1u") (footprint "Capacitor_SMD:C_0805_2012Metric")
@@ -3850,16 +3852,16 @@
       (reference "R6") (unit 1) (value "51") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/4cb98030-e11d-46ec-ace2-24b8060477eb"
-      (reference "R7") (unit 1) (value "51k") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R7") (unit 1) (value "5.1k") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/f02277ed-a9de-4a94-9a7a-bd1104f6b9ca"
-      (reference "R8") (unit 1) (value "51k") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R8") (unit 1) (value "5.1k") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/ffd130c3-85b2-4c7b-9ad6-0a05ac6435fc"
-      (reference "R9") (unit 1) (value "160") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R9") (unit 1) (value "51") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/f11b3e3a-7b08-49d8-b4b1-92030ffe70c2"
-      (reference "R10") (unit 1) (value "160") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R10") (unit 1) (value "51") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/59020215-584d-45e3-9399-bfe29ae3a841"
       (reference "R11") (unit 1) (value "4.7k") (footprint "Resistor_SMD:R_0805_2012Metric")
