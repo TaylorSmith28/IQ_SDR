@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "AD8041ARZ")(type "KiCad")(uri "${KICAD6_3RD_PARTY}/AD8041ARZ/AD8041ARZ.pretty")(options "")(descr ""))
+  (lib (name "lmao")(type "KiCad")(uri "${KICAD6_3RD_PARTY}/EEEFK1C100R footprint/lmao.pretty")(options "")(descr ""))
+  (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "${KICAD6_3RD_PARTY}/KiCad-RP-Pico-main/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.pretty")(options "")(descr ""))
+)
