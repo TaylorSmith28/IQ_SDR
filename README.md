@@ -1,7 +1,7 @@
 # IQ_SDR
 The goal of this project was to design a software defined radio (SDR) reciever that operated in the range of 7-12 MHz. This project was conducted with my partner Cadyn Maddocks as part of Walla Walla University's Electronics II course.
 ## Design Goals
-The following design objectives were given for this project as part of the course syllabus:
+The following design objectives were given for this project:
 1. Minimum discernible signal less than 1uV
 2. Visible image rejection through quisk
 3. Low noise figure
