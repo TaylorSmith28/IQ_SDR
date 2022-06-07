@@ -1,12 +1,12 @@
 # IQ_SDR
-The goal of this project was to design a software defined radio (SDR) reciever that operated in the range of 7-12 MHz. This project was conducted with my partner Cayden Maddocks as part of Walla Walla University's Electronics II course.
+The goal of this project was to design a software defined radio (SDR) reciever that operated in the range of 7-12 MHz. This project was conducted with my partner Cadyn Maddocks as part of Walla Walla University's Electronics II course.
 ## Design Goals
 The following design objectives were given for this project as part of the course syllabus:
 1. Minimum discernible signal less than 1uV
 2. Visible image rejection through quisk
 3. Low noise figure
 4. Low Cost ($25 budget)
-Cayden Maddocks and I set additional design obectives in order to aid in the design process:
+Cadyn Maddocks and I set additional design obectives in order to aid in the design process:
 1. Operate in a Frequency Range of 7-12MHz
 2. Modulation Type: Short Wave
 3. Size of 10 cm by 10 cm
@@ -55,7 +55,7 @@ Quisk was downloaded from http://www.james.ahlstrom.name/quisk/ on to a laptop w
 ![Final Results](/images/Schematics/results.jpg)
 Looking at the results above, image rejection can still be seen around 1 microvolt at a 10MHz frequency. This was the best image rejection that we were able to obtain. Using the antenna on top of the Kretschmar roof, we were able to obtain a clearly discernible signal from a religious radio station. Thank the Lord. 
 # Credits
-Huge credits go to Cayden Maddocks, my teammate who helped tremendoulsy on this project
+Huge credits go to Cadyn Maddocks, my teammate who helped tremendoulsy on this project
 
 Also thanks to Professor Rob Frohne, for without his help this project would not have been possible. 
 
