@@ -1,5 +1,5 @@
 # IQ_SDR
-The goal of this project was to design a software defined radio (SDR) reciever that operated in the range of _______ to _______ MHz. This project was conducted with my partner Cayden Maddocks as part of Walla Walla University's Electronics II course.
+The goal of this project was to design a software defined radio (SDR) reciever that operated in the range of 7-12 MHz. This project was conducted with my partner Cayden Maddocks as part of Walla Walla University's Electronics II course.
 ## Design Goals
 The following design objectives were given for this project as part of the course syllabus:
 1. Minimum discernible signal less than 1uV
@@ -7,13 +7,15 @@ The following design objectives were given for this project as part of the cours
 3. Low noise figure
 4. Low Cost ($25 budget)
 Cayden Maddocks and I set additional design obectives in order to aid in the design process:
-1. Operate in a Frequency Range of ________
-2. Modulation Type:
+1. Operate in a Frequency Range of 7-12MHz
+2. Modulation Type: Short Wave
 3. Size of 10 cm by 10 cm
 4. Weight of less than 2 pounds
 5. Power Requirement of 5V
+6. Use of Butterworth Bandpass Filter
+7. Use the Raspberry Pi Pico
 ## Overview
-The Software Defined Radio (SDR) reciever has three ports: antenna, USB, and audio jack. The input from the antenna gets filtered, mixed, and then the desired signal is then amplified. The input from the USB to the Raspberry Pi Pico powers the radio and operates the oscillator. The audio jack is connected to a sound card that is attached to a computer where the software demodulates the signal into recognizable audio. Mixing is accomplished via the Raspberry Pi Pico, with ported arduino code from Dr. Rob Frohne. This code interacts with Quisk, a software that controls the reciever through the Raspberry Pi. Quisk should allow the radio to be tuned to certain frequency but this was not accomplished due to issues from porting the arduino code over to the Raspberry Pi Pico. The total cost of this project was about ____.
+The Software Defined Radio (SDR) reciever has three ports: antenna, USB, and audio jack. The input from the antenna gets filtered, mixed, and then the desired signal is then amplified. The input from the USB to the Raspberry Pi Pico powers the radio and operates the oscillator. The audio jack is connected to a sound card that is attached to a computer where the software demodulates the signal into recognizable audio. Mixing is accomplished via the Raspberry Pi Pico, with ported arduino code from Dr. Rob Frohne. This code interacts with Quisk, a software that controls the reciever through the Raspberry Pi. Quisk should allow the radio to be tuned to certain frequency but this was not accomplished due to issues from porting the arduino code over to the Raspberry Pi Pico. The total cost of this project was about $25.
 # SDR Block Diagram
 ![Circuit Block Diagram](/images/Diagrams/SDRRecieverBlockDiagram.png)
 # Version 6 Design
@@ -34,19 +36,25 @@ The SDR uses a SN74CBT3253 Tayloe Mixer that leads into a Multiple Feedback Lowp
 ## Raspberry Pi Pico
 ![Raspberry Pi Pico](/images/Schematics/SDR_Raspberry.png)
 Shown above is the Raspberry Pi Pico and the pins used to drive the SDR.
-# Multiple Feedback Amplifier Simulation
+# Simulations
+## Multiple Feedback Amplifier Simulation
 ![Amplifier LTSpice](/images/Schematics/MultipleFeedbackAmplifier.png)
 ![Amplifier LTSpice Simulation](/images/Schematics/MultipleFeedbackAmplifierSimulation.png)
 Shown here is an LTSpice simulation for our Multiple Feedback Amplifier. The simulation shows the amplifier's response between 100Hz to 100MHz.
+## 7-12MHz Bandpass Filter
+![Bandpass Filter LTSpice](/images/Schematics/BandPassFilterLTSpice.png)
+![Bandpass Filter LTSpice Simulation](/images/Schematics/BandPassSimulations.png)
+Shown above is a simulation of the 7-12MHz Bandpass Filter. From the simulation, you can see that the response allows signals to pass from approximately 7-12MHz.
 # PCB Design
 ![PCB Design](/images/Schematics/PCB_Design.png)
 The board shown above was sourced from JLCPCB. Certain design principles were taken into consideration when coming up with the initial design of the board, such as:
-# Board Build Up Plan
-- NEEDS TO BE ADDED
+1. Avoidance of ground loops
+2. Distance between power supply and Antenna
+3. Use of a Voltage Smoother
 # Quisk Setup
 Quisk was downloaded from http://www.james.ahlstrom.name/quisk/ on to a laptop was able to be loaded onto the Raspberry Pi Pico. Quisk was then configured to operating on COM3, the respective port that communicated with the Raspberry Pi. Upon opening Quisk, a new SoftRock Fixed Radio was created and configured to use the appropriate sound card input. The hardware file path was also changed to quisk_conf_openradio.py to use the code that was ported from Dr. Frohne's orignial arduino code.
 # Results
-![Final Results](/images/Schematics/Final_Results)
+![Final Results](/images/Schematics/resultshighlighted)
 Looking at the results above, image rejection can still be seen around 1 microvolt at a 10MHz frequency. This was the best image rejection that we were able to obtain. Using the antenna on top of the Kretschmar roof, we were able to obtain a clearly discernible signal from a religious radio station. Thank the Lord. 
 # Credits
 Huge credits go to Cayden Maddocks, my teammate who helped tremendoulsy on this project
