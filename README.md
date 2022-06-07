@@ -52,7 +52,7 @@ The board shown above was sourced from JLCPCB. Certain design principles were ta
 # Quisk Setup
 Quisk was downloaded from http://www.james.ahlstrom.name/quisk/ on to a laptop was able to be loaded onto the Raspberry Pi Pico. Quisk was then configured to operating on COM3, the respective port that communicated with the Raspberry Pi. Upon opening Quisk, a new SoftRock Fixed Radio was created and configured to use the appropriate sound card input. The hardware file path was also changed to quisk_conf_openradio.py to use the code that was ported from Dr. Frohne's orignial arduino code.
 # Results
-![Final Results](/images/Schematics/results.png)
+![Final Results](/images/Schematics/results.jpg)
 Looking at the results above, image rejection can still be seen around 1 microvolt at a 10MHz frequency. This was the best image rejection that we were able to obtain. Using the antenna on top of the Kretschmar roof, we were able to obtain a clearly discernible signal from a religious radio station. Thank the Lord. 
 # Credits
 Huge credits go to Cayden Maddocks, my teammate who helped tremendoulsy on this project
