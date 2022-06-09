@@ -18,19 +18,19 @@ Cadyn Maddocks and I set additional design obectives in order to aid in the desi
 The Software Defined Radio (SDR) reciever has three ports: antenna, USB, and audio jack. The input from the antenna gets filtered, mixed, and then the desired signal is then amplified. The input from the USB to the Raspberry Pi Pico powers the radio and operates the oscillator. The audio jack is connected to a sound card that is attached to a computer where the software demodulates the signal into recognizable audio. Mixing is accomplished via the Raspberry Pi Pico, with ported arduino code from Dr. Rob Frohne. This code interacts with Quisk, a software that controls the reciever through the Raspberry Pi. Quisk should allow the radio to be tuned to certain frequency but this was not accomplished due to issues from porting the arduino code over to the Raspberry Pi Pico. The total cost of this project was about $25.
 # Version 6 Design
 ![Version 6 Design](/images/Schematics/SDRRecieverSchematic.png)
-Shown above is the design schematic for the SDR. More details will be given down below about each section of the schematic. This includes a 12MHz BandPass Filter, Tayloe Mixer, Oscillator, Voltage Smoother, LM4562MA Power Supply, and a Multiple Feedback Lowpass Filter and Amplifier.\
+Shown above is the design schematic for the SDR. More details will be given down below about each section of the schematic. This includes a 12MHz BandPass Filter, Tayloe Mixer, Oscillator, Voltage Smoother, LM4562MA Power Supply, and a Multiple Feedback Lowpass Filter and Amplifier.
 ## Bandpass Filter
 ![Bandpass Filter](/images/Schematics/SDR_BandPass_Filter.png)
 Shown above is a 7-12MHz, 3rd order, series first, Butterworth, bandpass filter. The above filter was designed using the LC Filter Design Tool found here: https://rf-tools.com/lc-filter/
-## DC Voltage Offset
+## DC Voltage Smoother
 ![Voltage Smoother](/images/Schematics/SDR_Voltage_Smoother.png)
-In order to limit noise into our radio a 5V voltage smoother was used before entering t
+In order to limit noise into our radio a 5V voltage smoother was used before entering the bandpass filter.
 ## Oscillator
 ![Oscillator](/images/Schematics/SDR_Oscillator.png)
 For the design of our radio we used a Si5351A-B-GT Oscillator.
 ## Tayloe Mixer and Multiple Feedback Lowpass Filter and Amplifer
 ![Tayloe Mixer](/images/Schematics/SDR_TayloeMixer.png)
-The SDR uses a SN74CBT3253 Tayloe Mixer that leads into a Multiple Feedback Lowpass Filter and Amplifer. The amplifier employs the use of two LMH4562MA op amps, and has a cutoof frequency around 100kHz.
+The SDR uses a SN74CBT3253 Tayloe Mixer that leads into a Multiple Feedback Lowpass Filter and Amplifer. The amplifier employs the use of two LMH4562MA op amps, and has a cutoff frequency around 100kHz.
 ## Raspberry Pi Pico
 ![Raspberry Pi Pico](/images/Schematics/SDR_Raspberry.png)
 Shown above is the Raspberry Pi Pico and the pins used to drive the SDR.
